@@ -17,8 +17,8 @@ services:
     restart: always
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: receitas
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: receitasdb
     ports:
       - "5432:5432"
     volumes:

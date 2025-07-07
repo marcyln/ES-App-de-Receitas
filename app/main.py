@@ -11,6 +11,10 @@ print("Tabelas criadas ou já existentes.")
 # Inicialização da aplicação
 app = FastAPI()
 
+@app.get("/")
+def read_root():
+    return {"message": "API funcionando!"}
+
 # Registro das rotas
 app.include_router(debug.router, prefix="/debug", tags=["Debug"])
 app.include_router(auth.router, prefix="/auth", tags=["Auth"])
